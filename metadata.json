@@ -1,0 +1,6 @@
+{
+  "name": "Aura Artisan Cafe",
+  "description": "A vibrant, welcoming Indian cafe & adda serving authentic filter kaapi, kadak masala chai, fresh bun maska, grilled sandwiches, and desi snacks.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,2301 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aura Cafe & Chai Adda | Bengaluru</title>
+    <meta name="description" content="A vibrant, welcoming Indian cafe & adda serving authentic filter kaapi, kadak masala chai, fresh bun maska, grilled sandwiches, and desi snacks in Indiranagar, Bengaluru." />
+    <meta property="og:title" content="Aura Cafe & Chai Adda | Bengaluru" />
+    <meta property="og:description" content="Authentic South Indian Filter Kaapi, Kadak Masala Chai, Bun Maska & Desi Cafe Snacks. Your favorite neighborhood adda in Indiranagar." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+      :root {
+        --primary: #8B6F47;
+        --primary-dark: #3A2315;
+        --primary-light: #A88B63;
+        --accent: #D4AF37;
+        --accent-hover: #b89326;
+        --burnt-orange: #CC5500;
+        --bg: #F5F1E8;
+        --bg-warm: #FAF7F2;
+        --card-bg: #FFFFFF;
+        --text: #2C2C2C;
+        --text-light: #5A524C;
+        --text-muted: #7A7067;
+        --border-color: #E6DDD2;
+        --shadow-sm: 0 2px 8px rgba(58, 35, 21, 0.06);
+        --shadow-md: 0 6px 20px rgba(58, 35, 21, 0.1);
+        --shadow-lg: 0 16px 36px rgba(58, 35, 21, 0.14);
+        --radius: 12px;
+        --transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background-color: var(--bg);
+        color: var(--text);
+        line-height: 1.65;
+        font-size: 16px;
+        overflow-x: hidden;
+      }
+
+      h1, h2, h3, h4, .font-serif {
+        font-family: 'Playfair Display', Georgia, serif;
+        color: var(--primary-dark);
+        font-weight: 700;
+        line-height: 1.25;
+      }
+
+      h1 {
+        font-size: clamp(2.4rem, 5vw, 3.4rem);
+        letter-spacing: -0.01em;
+      }
+
+      h2 {
+        font-size: clamp(1.85rem, 3.5vw, 2.35rem);
+        margin-bottom: 0.75rem;
+      }
+
+      h3 {
+        font-size: 1.3rem;
+      }
+
+      p {
+        color: var(--text-light);
+        margin-bottom: 1rem;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        transition: var(--transition);
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .section-header {
+        text-align: center;
+        max-width: 680px;
+        margin: 0 auto 3rem;
+      }
+
+      .section-badge {
+        display: inline-block;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        font-weight: 700;
+        color: var(--primary);
+        background-color: rgba(139, 111, 71, 0.12);
+        padding: 6px 14px;
+        border-radius: 999px;
+        margin-bottom: 12px;
+      }
+
+      /* Buttons */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 46px;
+        padding: 12px 26px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: var(--transition);
+        border: none;
+        white-space: nowrap;
+        text-align: center;
+      }
+
+      .btn-primary {
+        background-color: var(--accent);
+        color: #1F170F;
+        box-shadow: 0 4px 14px rgba(212, 175, 55, 0.35);
+      }
+
+      .btn-primary:hover {
+        background-color: var(--accent-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(212, 175, 55, 0.45);
+      }
+
+      .btn-secondary {
+        background-color: transparent;
+        color: var(--primary-dark);
+        border: 1.5px solid var(--primary);
+      }
+
+      .btn-secondary:hover {
+        background-color: var(--primary);
+        color: #FFFFFF;
+      }
+
+      .btn-orange {
+        background-color: var(--burnt-orange);
+        color: #FFFFFF;
+        box-shadow: 0 4px 14px rgba(204, 85, 0, 0.3);
+      }
+
+      .btn-orange:hover {
+        background-color: #b04800;
+        transform: translateY(-2px);
+      }
+
+      .btn-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: #FFFFFF;
+        font-weight: 600;
+        font-size: 1rem;
+        padding: 8px 12px;
+        border-bottom: 2px solid var(--accent);
+      }
+
+      .btn-link:hover {
+        color: var(--accent);
+        gap: 10px;
+      }
+
+      /* 1. STICKY NAVIGATION HEADER */
+      .header-nav {
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(245, 241, 232, 0.94);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--border-color);
+        z-index: 1000;
+        transition: var(--transition);
+      }
+
+      .header-nav.scrolled {
+        background-color: rgba(255, 255, 255, 0.97);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 76px;
+      }
+
+      .nav-logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--primary-dark);
+      }
+
+      .logo-icon {
+        width: 38px;
+        height: 38px;
+        background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+        color: var(--accent);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        box-shadow: 0 2px 8px rgba(58, 35, 21, 0.2);
+      }
+
+      .logo-text {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .logo-brand {
+        font-family: 'Playfair Display', serif;
+        letter-spacing: 0.05em;
+        line-height: 1.1;
+      }
+
+      .logo-sub {
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        color: var(--primary);
+        font-weight: 600;
+      }
+
+      .nav-links {
+        display: none;
+        align-items: center;
+        gap: 2rem;
+        list-style: none;
+      }
+
+      .nav-link {
+        font-size: 0.98rem;
+        font-weight: 600;
+        color: var(--text-light);
+        position: relative;
+        padding: 6px 0;
+      }
+
+      .nav-link:hover {
+        color: var(--primary-dark);
+      }
+
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--accent);
+        transition: width 0.2s ease;
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .hamburger-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        width: 44px;
+        height: 44px;
+        padding: 10px;
+        background: transparent;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      .hamburger-btn span {
+        display: block;
+        width: 22px;
+        height: 2.2px;
+        background-color: var(--primary-dark);
+        border-radius: 2px;
+        transition: var(--transition);
+      }
+
+      /* Mobile Drawer */
+      .mobile-menu {
+        position: fixed;
+        top: 76px;
+        left: 0;
+        width: 100%;
+        background-color: #FFFFFF;
+        border-bottom: 2px solid var(--border-color);
+        padding: 24px 20px;
+        box-shadow: var(--shadow-lg);
+        display: none;
+        flex-direction: column;
+        gap: 16px;
+        z-index: 999;
+      }
+
+      .mobile-menu.active {
+        display: flex;
+        animation: slideDown 0.25s ease-out forwards;
+      }
+
+      @keyframes slideDown {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      .mobile-nav-link {
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: var(--primary-dark);
+        padding: 10px 0;
+        border-bottom: 1px solid #F0EAE1;
+      }
+
+      .mobile-cta-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 8px;
+      }
+
+      /* 2. HERO SECTION */
+      .hero-section {
+        position: relative;
+        min-height: 88vh;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(rgba(26, 15, 9, 0.72), rgba(38, 22, 13, 0.8)), url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        color: #FFFFFF;
+        padding: 90px 0 70px;
+      }
+
+      .hero-content {
+        max-width: 740px;
+      }
+
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(212, 175, 55, 0.18);
+        border: 1px solid rgba(212, 175, 55, 0.4);
+        color: #F8E7B2;
+        padding: 7px 16px;
+        border-radius: 50px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        margin-bottom: 1.5rem;
+      }
+
+      .hero-title {
+        color: #FFFFFF;
+        margin-bottom: 1.25rem;
+      }
+
+      .hero-title span {
+        color: var(--accent);
+        display: block;
+        font-style: italic;
+        font-weight: 500;
+      }
+
+      .hero-subtitle {
+        font-size: clamp(1.15rem, 2vw, 1.4rem);
+        color: #E8E0D5;
+        margin-bottom: 2.2rem;
+        font-weight: 400;
+        max-width: 600px;
+      }
+
+      .hero-cta-group {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 18px;
+        margin-bottom: 3rem;
+      }
+
+      .hero-highlights {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px 32px;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.18);
+      }
+
+      .highlight-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.92rem;
+        color: #E5DDD3;
+      }
+
+      .highlight-icon {
+        color: var(--accent);
+        display: flex;
+      }
+
+      /* 3. ABOUT SECTION */
+      .about-section {
+        padding: 90px 0;
+        background-color: var(--bg);
+      }
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        align-items: center;
+      }
+
+      .about-images-wrapper {
+        position: relative;
+      }
+
+      .about-main-img {
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-md);
+        width: 100%;
+        height: 420px;
+        object-fit: cover;
+      }
+
+      .about-floating-card {
+        position: absolute;
+        bottom: -24px;
+        right: 16px;
+        background: #FFFFFF;
+        padding: 20px 24px;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-lg);
+        border-left: 4px solid var(--accent);
+        max-width: 250px;
+      }
+
+      .about-floating-card .years {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: var(--primary-dark);
+        font-family: 'Playfair Display', serif;
+        line-height: 1;
+      }
+
+      .about-floating-card .label {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--text-light);
+        margin-top: 4px;
+      }
+
+      .about-text h2 {
+        margin-bottom: 1.5rem;
+      }
+
+      .about-text p {
+        margin-bottom: 1.25rem;
+        font-size: 1.02rem;
+      }
+
+      .about-stats-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--border-color);
+      }
+
+      .stat-item h4 {
+        font-size: 1.6rem;
+        color: var(--primary);
+        font-family: 'Playfair Display', serif;
+      }
+
+      .stat-item p {
+        font-size: 0.85rem;
+        margin-bottom: 0;
+      }
+
+      /* 4. FEATURED MENU SHOWCASE */
+      .menu-section {
+        padding: 90px 0;
+        background-color: var(--bg-warm);
+      }
+
+      .menu-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 28px;
+        margin-bottom: 2.5rem;
+      }
+
+      .menu-card {
+        background-color: var(--card-bg);
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow-sm);
+        border: 1px solid var(--border-color);
+        transition: var(--transition);
+        display: flex;
+        flex-direction: column;
+      }
+
+      .menu-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
+        border-color: var(--primary-light);
+      }
+
+      .menu-card-img-wrap {
+        position: relative;
+        height: 220px;
+        overflow: hidden;
+      }
+
+      .menu-card-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .menu-card:hover .menu-card-img {
+        transform: scale(1.06);
+      }
+
+      .menu-tag {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        background-color: rgba(42, 24, 16, 0.85);
+        backdrop-filter: blur(4px);
+        color: #FFFFFF;
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 4px 12px;
+        border-radius: 4px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      .menu-card-body {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+
+      .menu-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+        margin-bottom: 10px;
+      }
+
+      .menu-card-title {
+        font-size: 1.25rem;
+        color: var(--primary-dark);
+      }
+
+      .menu-card-price {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--primary);
+        white-space: nowrap;
+      }
+
+      .menu-card-desc {
+        font-size: 0.92rem;
+        color: var(--text-light);
+        margin-bottom: 1.25rem;
+        flex-grow: 1;
+      }
+
+      .menu-card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 14px;
+        border-top: 1px dashed var(--border-color);
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--text-muted);
+      }
+
+      .menu-note-box {
+        text-align: center;
+        background-color: rgba(139, 111, 71, 0.08);
+        border: 1px solid rgba(139, 111, 71, 0.2);
+        padding: 20px 24px;
+        border-radius: var(--radius);
+        max-width: 640px;
+        margin: 0 auto;
+      }
+
+      .menu-note-box p {
+        margin-bottom: 12px;
+        font-weight: 600;
+        color: var(--primary-dark);
+      }
+
+      /* 5. CAFE ATMOSPHERE GALLERY */
+      .gallery-section {
+        padding: 90px 0;
+        background-color: var(--bg);
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .gallery-item {
+        position: relative;
+        border-radius: var(--radius);
+        overflow: hidden;
+        height: 290px;
+        cursor: pointer;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s cubic-bezier(0.2, 0, 0.2, 1);
+      }
+
+      .gallery-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(30, 18, 10, 0.85) 0%, rgba(30, 18, 10, 0.2) 60%, transparent 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 22px;
+        color: #FFFFFF;
+        opacity: 0.9;
+        transition: var(--transition);
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.08);
+      }
+
+      .gallery-item:hover .gallery-overlay {
+        opacity: 1;
+        background: linear-gradient(to top, rgba(30, 18, 10, 0.95) 0%, rgba(30, 18, 10, 0.3) 60%, transparent 100%);
+      }
+
+      .gallery-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.18rem;
+        color: #FFFFFF;
+        margin-bottom: 4px;
+      }
+
+      .gallery-caption {
+        font-size: 0.85rem;
+        color: #E6DDD3;
+        margin-bottom: 0;
+      }
+
+      /* 6. TESTIMONIALS SECTION */
+      .testimonials-section {
+        padding: 90px 0;
+        background-color: var(--bg-warm);
+      }
+
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .testimonial-card {
+        background: #FFFFFF;
+        padding: 32px 26px;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-sm);
+        border: 1px solid var(--border-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: var(--transition);
+      }
+
+      .testimonial-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
+      }
+
+      .stars {
+        color: #E2A03F;
+        font-size: 1.15rem;
+        letter-spacing: 2px;
+        margin-bottom: 1rem;
+      }
+
+      .testimonial-quote {
+        font-size: 1rem;
+        font-style: italic;
+        color: var(--text);
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+      }
+
+      .guest-info {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .guest-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid var(--border-color);
+      }
+
+      .guest-meta h4 {
+        font-size: 1rem;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 700;
+        color: var(--primary-dark);
+      }
+
+      .guest-meta span {
+        font-size: 0.8rem;
+        color: #2E7D32;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      /* 7. HOURS & LOCATION */
+      .location-section {
+        padding: 90px 0;
+        background-color: var(--bg);
+      }
+
+      .location-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 36px;
+        background: #FFFFFF;
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+        border: 1px solid var(--border-color);
+      }
+
+      .location-info-pane {
+        padding: 36px 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+      }
+
+      .info-block {
+        display: flex;
+        gap: 16px;
+      }
+
+      .info-icon {
+        width: 44px;
+        height: 44px;
+        background-color: rgba(139, 111, 71, 0.1);
+        color: var(--primary);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .info-details h4 {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--primary-dark);
+        margin-bottom: 6px;
+      }
+
+      .info-details p {
+        font-size: 0.95rem;
+        margin-bottom: 4px;
+      }
+
+      .hours-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        font-size: 0.92rem;
+        margin-bottom: 4px;
+      }
+
+      .hours-row .days {
+        font-weight: 600;
+        color: var(--text);
+      }
+
+      .hours-row .time {
+        color: var(--text-light);
+      }
+
+      .map-wrapper {
+        min-height: 380px;
+        width: 100%;
+        background-color: #EAE6DF;
+      }
+
+      .map-wrapper iframe {
+        width: 100%;
+        height: 100%;
+        min-height: 380px;
+        border: 0;
+        display: block;
+      }
+
+      /* 8. CTA SECTION */
+      .cta-section {
+        padding: 80px 0;
+        background: linear-gradient(135deg, var(--primary-dark) 0%, #201309 100%);
+        color: #FFFFFF;
+      }
+
+      .cta-section h2 {
+        color: #FFFFFF;
+        font-size: clamp(2rem, 3.5vw, 2.6rem);
+      }
+
+      .cta-section .section-header p {
+        color: #D6CCC0;
+      }
+
+      .cta-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .cta-card {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: var(--radius);
+        padding: 36px 28px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: var(--transition);
+      }
+
+      .cta-card:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-4px);
+        border-color: var(--accent);
+      }
+
+      .cta-card-icon {
+        width: 58px;
+        height: 58px;
+        margin: 0 auto 18px;
+        background: rgba(212, 175, 55, 0.15);
+        color: var(--accent);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .cta-card h3 {
+        color: #FFFFFF;
+        margin-bottom: 8px;
+      }
+
+      .cta-card p {
+        color: #C8BFB5;
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+      }
+
+      /* 9. FOOTER */
+      .site-footer {
+        background-color: #170E07;
+        color: #B8ADA2;
+        padding: 70px 0 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-bottom: 50px;
+      }
+
+      .footer-brand .logo-brand {
+        color: #FFFFFF;
+        font-size: 1.5rem;
+      }
+
+      .footer-brand p {
+        color: #A3968A;
+        font-size: 0.92rem;
+        margin-top: 12px;
+        max-width: 320px;
+      }
+
+      .footer-title {
+        color: #FFFFFF;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 1.05rem;
+        font-weight: 700;
+        margin-bottom: 18px;
+      }
+
+      .footer-links {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .footer-links a:hover {
+        color: var(--accent);
+        padding-left: 4px;
+      }
+
+      .footer-socials {
+        display: flex;
+        gap: 12px;
+        margin-top: 16px;
+      }
+
+      .social-link {
+        width: 42px;
+        height: 42px;
+        background-color: rgba(255, 255, 255, 0.08);
+        color: #FFFFFF;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: var(--transition);
+      }
+
+      .social-link:hover {
+        background-color: var(--accent);
+        color: #1A0F09;
+        transform: translateY(-2px);
+      }
+
+      .newsletter-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .newsletter-input {
+        height: 46px;
+        padding: 10px 16px;
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 6px;
+        color: #FFFFFF;
+        font-size: 0.95rem;
+        font-family: inherit;
+      }
+
+      .newsletter-input:focus {
+        outline: none;
+        border-color: var(--accent);
+        background: rgba(255, 255, 255, 0.12);
+      }
+
+      .footer-bottom {
+        padding-top: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        text-align: center;
+        font-size: 0.85rem;
+        color: #7E7367;
+      }
+
+      /* MODALS */
+      .modal-backdrop {
+        position: fixed;
+        inset: 0;
+        background-color: rgba(20, 12, 7, 0.75);
+        backdrop-filter: blur(6px);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        z-index: 2000;
+      }
+
+      .modal-backdrop.open {
+        display: flex;
+        animation: fadeIn 0.2s ease-out;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      .modal-dialog {
+        background: #FFFFFF;
+        border-radius: 16px;
+        max-width: 520px;
+        width: 100%;
+        padding: 32px;
+        box-shadow: var(--shadow-lg);
+        position: relative;
+        max-height: 90vh;
+        overflow-y: auto;
+      }
+
+      .modal-close-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: transparent;
+        border: none;
+        font-size: 1.5rem;
+        color: var(--text-muted);
+        cursor: pointer;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+      }
+
+      .modal-close-btn:hover {
+        background-color: #F5EFEB;
+        color: var(--text);
+      }
+
+      .form-group {
+        margin-bottom: 16px;
+      }
+
+      .form-label {
+        display: block;
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: var(--primary-dark);
+        margin-bottom: 6px;
+      }
+
+      .form-control {
+        width: 100%;
+        height: 46px;
+        padding: 10px 14px;
+        border-radius: 8px;
+        border: 1.5px solid var(--border-color);
+        font-size: 0.95rem;
+        font-family: inherit;
+        color: var(--text);
+        background-color: #FAF8F5;
+        transition: var(--transition);
+      }
+
+      .form-control:focus {
+        outline: none;
+        border-color: var(--primary);
+        background-color: #FFFFFF;
+      }
+
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+
+      /* Lightbox */
+      .lightbox-modal {
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 2500;
+        padding: 20px;
+      }
+
+      .lightbox-modal.open {
+        display: flex;
+      }
+
+      .lightbox-img {
+        max-width: 90vw;
+        max-height: 80vh;
+        border-radius: 8px;
+        box-shadow: 0 0 40px rgba(0,0,0,0.8);
+      }
+
+      /* Toast Notification */
+      .toast {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        background-color: var(--primary-dark);
+        color: #FFFFFF;
+        padding: 14px 22px;
+        border-radius: 8px;
+        box-shadow: var(--shadow-lg);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 0.95rem;
+        z-index: 3000;
+        transform: translateY(100px);
+        opacity: 0;
+        transition: all 0.3s ease;
+        border-left: 4px solid var(--accent);
+      }
+
+      .toast.show {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      /* Back to top button */
+      .back-to-top {
+        position: fixed;
+        bottom: 24px;
+        left: 24px;
+        width: 44px;
+        height: 44px;
+        background-color: var(--card-bg);
+        color: var(--primary-dark);
+        border: 1px solid var(--border-color);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: var(--shadow-md);
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+        z-index: 900;
+      }
+
+      .back-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .back-to-top:hover {
+        background-color: var(--accent);
+        color: #1F170F;
+        transform: translateY(-3px);
+      }
+
+      /* MEDIA QUERIES FOR RESPONSIVENESS */
+      @media (min-width: 640px) {
+        .menu-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .gallery-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .testimonials-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (min-width: 992px) {
+        .nav-links {
+          display: flex;
+        }
+        .hamburger-btn {
+          display: none;
+        }
+        .about-grid {
+          grid-template-columns: 1fr 1.15fr;
+          gap: 60px;
+        }
+        .menu-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .gallery-grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+        .testimonials-grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+        .location-grid {
+          grid-template-columns: 1.1fr 1fr;
+        }
+        .cta-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .footer-grid {
+          grid-template-columns: 2fr 1fr 1fr 1.5fr;
+        }
+        .footer-bottom {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        .newsletter-form {
+          flex-direction: row;
+        }
+        .newsletter-input {
+          flex-grow: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- 1. STICKY NAVIGATION HEADER -->
+    <header id="site-header" class="header-nav">
+      <div class="container nav-container">
+        <a href="#hero" class="nav-logo" aria-label="Aura Cafe and Chai Adda Home">
+          <div class="logo-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 8h1a4 4 0 1 1 0 8h-1"></path>
+              <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path>
+              <line x1="6" y1="2" x2="6" y2="4"></line>
+              <line x1="10" y1="2" x2="10" y2="4"></line>
+              <line x1="14" y1="2" x2="14" y2="4"></line>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-brand">AURA CAFE</span>
+            <span class="logo-sub">Chai & Kaapi Adda</span>
+          </div>
+        </a>
+
+        <nav aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="#menu" class="nav-link">Menu</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#gallery" class="nav-link">Gallery</a></li>
+            <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+            <li><a href="#location" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <button id="nav-reserve-btn" class="btn btn-primary" onclick="openReservationModal()">
+            Reserve Table
+          </button>
+          <button id="nav-order-btn" class="btn btn-secondary" onclick="openOrderModal()" style="display: none;">
+            Order Online
+          </button>
+          <button id="hamburger-toggle" class="hamburger-btn" aria-label="Toggle navigation menu" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Hamburger Dropdown Menu -->
+      <div id="mobile-menu" class="mobile-menu">
+        <a href="#menu" class="mobile-nav-link" onclick="closeMobileMenu()">Featured Menu</a>
+        <a href="#about" class="mobile-nav-link" onclick="closeMobileMenu()">Our Story & Specialty</a>
+        <a href="#gallery" class="mobile-nav-link" onclick="closeMobileMenu()">Ambiance Gallery</a>
+        <a href="#testimonials" class="mobile-nav-link" onclick="closeMobileMenu()">Guest Reviews</a>
+        <a href="#location" class="mobile-nav-link" onclick="closeMobileMenu()">Hours & Location</a>
+        <div class="mobile-cta-group">
+          <button class="btn btn-primary w-full" onclick="closeMobileMenu(); openReservationModal();">
+            Reserve Table Now
+          </button>
+          <button class="btn btn-orange w-full" onclick="closeMobileMenu(); openOrderModal();">
+            Order Online (Takeaway)
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- 2. HERO SECTION -->
+      <section id="hero" class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+              EST. 2018 • INDIRANAGAR, BENGALURU
+            </div>
+            
+            <h1 class="hero-title">
+              Aura Cafe & Chai Adda <span>by Kabir & Friends</span>
+            </h1>
+            
+            <p class="hero-subtitle">
+              Authentic South Indian Degree Filter Kaapi, Garama-Garam Masala Chai, Fresh Bun Maska, and Crispy Sandwiches. The ultimate hangout spot for friends, college gangs, and family chai pe charcha!
+            </p>
+
+            <div class="hero-cta-group">
+              <button id="hero-reserve-btn" class="btn btn-primary btn-lg" onclick="openReservationModal()">
+                Reserve Table Now
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+              <a href="#menu" class="btn-link">
+                View Menu
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m6 9 6 6 6-6"/>
+                </svg>
+              </a>
+            </div>
+
+            <div class="hero-highlights">
+              <div class="highlight-item">
+                <span class="highlight-icon">✓</span>
+                <span>Chikmagalur Filter Kaapi & Kulhad Chai</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">✓</span>
+                <span>Fresh Bun Maska & Samosas Daily</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">✓</span>
+                <span>Pocket-Friendly • Rated 4.9★ by 2,400+ Guests</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. ABOUT SECTION -->
+      <section id="about" class="about-section">
+        <div class="container">
+          <div class="about-grid">
+            <div class="about-images-wrapper">
+              <img 
+                src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=900&q=80" 
+                alt="Aura Cafe cozy seating area in Indiranagar Bengaluru" 
+                class="about-main-img" 
+                loading="lazy"
+              />
+              <div class="about-floating-card">
+                <div class="years">6+</div>
+                <div class="label">Years of Serving Chai, Kaapi & Smiles in Bengaluru</div>
+              </div>
+            </div>
+
+            <div class="about-text">
+              <span class="section-badge">Our Story & Desi Dil</span>
+              <h2>Welcome to Our Cafe (Apna Adda)</h2>
+              
+              <p>
+                Started in 2018 in the cozy bylanes of Indiranagar, Aura Cafe was created by Kabir and a group of college friends who missed having an honest, welcoming neighborhood hangout. No fancy French names, no tiny portions, and no burning a hole in your pocket — just authentic, steaming hot cups of South Indian filter kaapi, slow-brewed adrak-elaichi chai, and comforting bites made fresh everyday.
+              </p>
+              
+              <p>
+                We source our coffee beans straight from trusted plantations in Chikmagalur and Kodagu (Coorg), roasting them just right for that strong, aromatic morning kick. Our chai is brewed the traditional way with fresh crushed ginger, fragrant green cardamom, and rich boiled milk.
+              </p>
+
+              <p>
+                Pair your drink with our famous pillowy-soft Irani bun maska, crispy golden samosas, and loaded Bombay grilled sandwiches. Whether you're working remotely on your laptop, sharing college gossip with friends, or having a peaceful Sunday breakfast with family, Aura Cafe is always your home away from home.
+              </p>
+
+              <div class="about-stats-grid">
+                <div class="stat-item">
+                  <h4>10,000+</h4>
+                  <p>Cups of Chai & Kaapi Every Month</p>
+                </div>
+                <div class="stat-item">
+                  <h4>100% Desi</h4>
+                  <p>Fresh Milk & Authentic Local Spices</p>
+                </div>
+                <div class="stat-item">
+                  <h4>Pocket Friendly</h4>
+                  <p>Honest Quality & Great Taste</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. FEATURED MENU SHOWCASE -->
+      <section id="menu" class="menu-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-badge">Garama-Garam & Swadisht</span>
+            <h2>Our Signature Offerings</h2>
+            <p>From strong South Indian filter kaapi to buttery bun maska, loaded grilled sandwiches, and sweet treats.</p>
+          </div>
+
+          <div class="menu-grid">
+            <!-- 1. Coffee Specialties -->
+            <article class="menu-card">
+              <div class="menu-card-img-wrap">
+                <img 
+                  src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=700&q=80" 
+                  alt="South Indian Degree Filter Kaapi in brass dabarah tumbler" 
+                  class="menu-card-img" 
+                  loading="lazy"
+                />
+                <span class="menu-tag">Coffee Specialty</span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-header">
+                  <h3 class="menu-card-title">South Indian Degree Filter Kaapi</h3>
+                  <span class="menu-card-price">₹60</span>
+                </div>
+                <p class="menu-card-desc">
+                  Strong, piping hot decoction brewed with Chikmagalur estate beans and chicory, blended with thick frothed milk in a traditional brass dabarah & tumbler.
+                </p>
+                <div class="menu-card-footer">
+                  <span>Traditional Brass Dabarah</span>
+                  <span>Signature Brew</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 2. Fresh Pastries -->
+            <article class="menu-card">
+              <div class="menu-card-img-wrap">
+                <img 
+                  src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=700&q=80" 
+                  alt="Fresh Irani Bun Maska with butter and jam" 
+                  class="menu-card-img" 
+                  loading="lazy"
+                />
+                <span class="menu-tag">Fresh Bakery</span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-header">
+                  <h3 class="menu-card-title">Irani Bun Maska & Jam</h3>
+                  <span class="menu-card-price">₹70</span>
+                </div>
+                <p class="menu-card-desc">
+                  Pillowy-soft fresh bakery bun generously slathered with salted Amul butter and sweet mixed fruit jam. Dip it straight into hot chai!
+                </p>
+                <div class="menu-card-footer">
+                  <span>Melt-in-Mouth</span>
+                  <span>Best with Hot Chai</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 3. Breakfast Sets -->
+            <article class="menu-card">
+              <div class="menu-card-img-wrap">
+                <img 
+                  src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=700&q=80" 
+                  alt="Desi Nashta Combo with Samosa, Poha and Chai" 
+                  class="menu-card-img" 
+                  loading="lazy"
+                />
+                <span class="menu-tag">Breakfast Sets</span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-header">
+                  <h3 class="menu-card-title">Desi Nashta Combo</h3>
+                  <span class="menu-card-price">₹150</span>
+                </div>
+                <p class="menu-card-desc">
+                  Steaming hot Indori poha garnished with fresh coriander and crispy sev, one crispy aloo samosa with tangy mint chutney, and a cup of Kadak Chai.
+                </p>
+                <div class="menu-card-footer">
+                  <span>Served All-Day</span>
+                  <span>Pocket-Friendly Value</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 4. Lunch Bowls -->
+            <article class="menu-card">
+              <div class="menu-card-img-wrap">
+                <img 
+                  src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=700&q=80" 
+                  alt="Bombay Grilled Cheese Paneer Sandwich with chips" 
+                  class="menu-card-img" 
+                  loading="lazy"
+                />
+                <span class="menu-tag">Cafe Plates</span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-header">
+                  <h3 class="menu-card-title">Bombay Grilled Paneer Sandwich</h3>
+                  <span class="menu-card-price">₹180</span>
+                </div>
+                <p class="menu-card-desc">
+                  Crispy grilled three-layered bread stuffed with spiced paneer tikka cubes, fresh capsicum, red onions, spicy green chutney, and melting Amul cheese with salted chips.
+                </p>
+                <div class="menu-card-footer">
+                  <span>Super Cheesy</span>
+                  <span>Cafe Bestseller</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 5. Desserts -->
+            <article class="menu-card">
+              <div class="menu-card-img-wrap">
+                <img 
+                  src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=700&q=80" 
+                  alt="Hot Gulab Jamun with Ice Cream and Rabdi" 
+                  class="menu-card-img" 
+                  loading="lazy"
+                />
+                <span class="menu-tag">Desserts</span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-header">
+                  <h3 class="menu-card-title">Hot Gulab Jamun with Ice Cream</h3>
+                  <span class="menu-card-price">₹120</span>
+                </div>
+                <p class="menu-card-desc">
+                  Two warm, soft desi ghee gulab jamuns soaked in saffron-rose syrup, topped with chilled creamy rabdi and a scoop of vanilla ice cream.
+                </p>
+                <div class="menu-card-footer">
+                  <span>Hot & Cold Treat</span>
+                  <span>Pure Desi Ghee</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 6. Beverages -->
+            <article class="menu-card">
+              <div class="menu-card-img-wrap">
+                <img 
+                  src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=700&q=80" 
+                  alt="Desi Cold Coffee with chocolate drizzle" 
+                  class="menu-card-img" 
+                  loading="lazy"
+                />
+                <span class="menu-tag">Beverages</span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-header">
+                  <h3 class="menu-card-title">Desi Cold Coffee & Kulhad Chai</h3>
+                  <span class="menu-card-price">₹90</span>
+                </div>
+                <p class="menu-card-desc">
+                  Thick, frothy blended cold coffee topped with cocoa powder and chocolate drizzle, or our signature earthen-pot (kulhad) adrak-elaichi chai.
+                </p>
+                <div class="menu-card-footer">
+                  <span>Chilled or Steaming Hot</span>
+                  <span>Regulars' Pick</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="menu-note-box">
+            <p>Craving something quick? We also make Cheese Maggi Bowls, Keema Pav, Veg Rolls, and Fresh Fruit Shakes!</p>
+            <span style="font-size: 0.95rem; color: var(--text-light); display: block; margin-bottom: 14px;">
+              Full menu available for dine-in, takeaway, and WhatsApp ordering. Clean, hygienic preparation guaranteed.
+            </span>
+            <button class="btn btn-primary" onclick="openReservationModal()">
+              Reserve a Table with Friends
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. CAFE ATMOSPHERE GALLERY -->
+      <section id="gallery" class="gallery-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-badge">Gup-Shup & Vibes</span>
+            <h2>Take a Peek at Our Cafe</h2>
+            <p>Lush green courtyard seating, open kitchen aromas, steaming filter coffee, and smiling faces having chai pe charcha.</p>
+          </div>
+
+          <div class="gallery-grid">
+            <!-- Photo 1: Seating area/outdoor patio -->
+            <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1400&q=85', 'Open Green Courtyard & Garden Seating')">
+              <img 
+                src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=700&q=80" 
+                alt="Open garden courtyard seating with greenery and wooden tables" 
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <h3 class="gallery-title">Courtyard & Garden</h3>
+                <p class="gallery-caption">Breezy outdoor seating under Bangalore's green trees, ideal for cool evening chai.</p>
+              </div>
+            </div>
+
+            <!-- Photo 2: Food photography -->
+            <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=1400&q=85', 'Fresh Bakes, Samosas & Bun Maska')">
+              <img 
+                src="https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=700&q=80" 
+                alt="Freshly baked soft buns, patties and snacks at the counter" 
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <h3 class="gallery-title">Fresh Bakes & Snacks</h3>
+                <p class="gallery-caption">Garama-garam samosas, soft bun maska, patties, and sandwiches prepared fresh.</p>
+              </div>
+            </div>
+
+            <!-- Photo 3: Coffee preparation -->
+            <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1400&q=85', 'Live Kaapi Pour & Kulhad Chai Brewing')">
+              <img 
+                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=80" 
+                alt="Hot aromatic coffee brewing in the cafe kitchen" 
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <h3 class="gallery-title">Live Kaapi & Chai Counter</h3>
+                <p class="gallery-caption">Frothy meter-high filter coffee pours and slow-simmered ginger elaichi tea.</p>
+              </div>
+            </div>
+
+            <!-- Photo 4: Customer moments -->
+            <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1400&q=85', 'Friends, College Groups & Weekend Family Gatherings')">
+              <img 
+                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=700&q=80" 
+                alt="Friends laughing and enjoying snacks together at the cafe" 
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <h3 class="gallery-title">Friends & Gupshup</h3>
+                <p class="gallery-caption">An easy-going adda where friends gossip, students study, and conversations never stop.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. TESTIMONIALS SECTION -->
+      <section id="testimonials" class="testimonials-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-badge">Dil Se Reviews</span>
+            <h2>What Bengaluru Loves About Us</h2>
+            <p>Honest words from college students, busy office-goers, and neighborhood families.</p>
+          </div>
+
+          <div class="testimonials-grid">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+              <div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-quote">
+                  "Best filter coffee and kadak adrak chai in Indiranagar! The bun maska is so soft, it melts right in your mouth. Our gang meets here every weekend for chai pe charcha."
+                </p>
+              </div>
+              <div class="guest-info">
+                <img 
+                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" 
+                  alt="Ananya Sharma" 
+                  class="guest-avatar" 
+                  loading="lazy"
+                />
+                <div class="guest-meta">
+                  <h4>Ananya Sharma</h4>
+                  <span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    Regular Guest
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+              <div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-quote">
+                  "Super tasty Bombay grilled sandwich and hot samosas! Not ridiculously overpriced like other cafes in Indiranagar, and the staff is genuinely polite and welcoming."
+                </p>
+              </div>
+              <div class="guest-info">
+                <img 
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" 
+                  alt="Dr. Vikram Malhotra" 
+                  class="guest-avatar" 
+                  loading="lazy"
+                />
+                <div class="guest-meta">
+                  <h4>Dr. Vikram Malhotra</h4>
+                  <span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    Verified Guest
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+              <div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-quote">
+                  "Great workspace with high-speed Wi-Fi and power plug points. Their Desi Cold Coffee is thick and gives the perfect boost during long afternoon work hours."
+                </p>
+              </div>
+              <div class="guest-info">
+                <img 
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" 
+                  alt="Priyanshu Mehta" 
+                  class="guest-avatar" 
+                  loading="lazy"
+                />
+                <div class="guest-meta">
+                  <h4>Priyanshu Mehta</h4>
+                  <span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    Remote Worker
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="testimonial-card">
+              <div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-quote">
+                  "Sunday family favorite! My parents absolutely adored the hot gulab jamun with rabdi and authentic degree kaapi. Very homely and relaxed vibe."
+                </p>
+              </div>
+              <div class="guest-info">
+                <img 
+                  src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&q=80" 
+                  alt="Sneha & Rahul Sen" 
+                  class="guest-avatar" 
+                  loading="lazy"
+                />
+                <div class="guest-meta">
+                  <h4>Sneha & Rahul Sen</h4>
+                  <span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    Verified Guest
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. HOURS & LOCATION -->
+      <section id="location" class="location-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-badge">Visit Us</span>
+            <h2>Hours & Location</h2>
+            <p>Conveniently situated in the prime heart of Indiranagar with dedicated parking and serene indoor/patio seating.</p>
+          </div>
+
+          <div class="location-grid">
+            <div class="location-info-pane">
+              <!-- Operating Hours -->
+              <div class="info-block">
+                <div class="info-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                <div class="info-details" style="width: 100%;">
+                  <h4>Operating Hours</h4>
+                  <div class="hours-row">
+                    <span class="days">Monday – Thursday:</span>
+                    <span class="time">7:30 AM – 10:30 PM</span>
+                  </div>
+                  <div class="hours-row">
+                    <span class="days">Friday – Saturday:</span>
+                    <span class="time">7:30 AM – 11:30 PM</span>
+                  </div>
+                  <div class="hours-row">
+                    <span class="days">Sunday:</span>
+                    <span class="time">7:30 AM – 11:00 PM</span>
+                  </div>
+                  <p style="font-size: 0.85rem; color: #2E7D32; font-weight: 600; margin-top: 6px;">
+                    ● Open all 7 days • Fresh breakfast bakes ready from 7:30 AM
+                  </p>
+                </div>
+              </div>
+
+              <!-- Address -->
+              <div class="info-block">
+                <div class="info-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="info-details">
+                  <h4>Our Location</h4>
+                  <p>542, 12th Main Road, 7th Cross, HAL 2nd Stage, Indiranagar, Bengaluru, Karnataka 560038, India</p>
+                  <p style="font-size: 0.85rem; color: var(--text-muted);">
+                    (Opposite Defence Colony Park • 4-minute walk from CMH Road Metro Station)
+                  </p>
+                </div>
+              </div>
+
+              <!-- Contact & Parking -->
+              <div class="info-block">
+                <div class="info-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div class="info-details">
+                  <h4>Contact & Parking</h4>
+                  <p><strong>Phone:</strong> +91 80 4965 2200 | +91 98450 12345</p>
+                  <p><strong>Email:</strong> reservations@auracafe.in</p>
+                  <p style="font-size: 0.88rem; color: var(--primary); font-weight: 600; margin-top: 4px;">
+                    Complimentary Valet Parking Available • Wheelchair Accessible Ramp
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Embedded Google Map -->
+            <div class="map-wrapper">
+              <iframe 
+                title="Aura Artisan Cafe Indiranagar Location Map"
+                src="https://maps.google.com/maps?q=12th%20Main%20Rd%2C%20Indiranagar%2C%20Bengaluru&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. CTA SECTION (Before Footer) -->
+      <section id="cta" class="cta-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-badge" style="background: rgba(212,175,55,0.2); color: #F8E7B2;">Aapka Apna Adda</span>
+            <h2>Chalo, Chai Pe Milte Hain!</h2>
+            <p>Whether it's an energetic morning breakfast, a productive work sprint on your laptop, or an evening chai session with your gang.</p>
+          </div>
+
+          <div class="cta-grid">
+            <!-- Column 1: Reserve Table -->
+            <div class="cta-card">
+              <div>
+                <div class="cta-card-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                </div>
+                <h3>Reserve Table</h3>
+                <p>Reserve your preferred garden courtyard table or a quiet work booth in advance without waiting.</p>
+              </div>
+              <button class="btn btn-primary" onclick="openReservationModal()">
+                Book Your Table Free
+              </button>
+            </div>
+
+            <!-- Column 2: Order Online -->
+            <div class="cta-card">
+              <div>
+                <div class="cta-card-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                  </svg>
+                </div>
+                <h3>Order Online</h3>
+                <p>Craving fresh bun maska or cold coffee? Quick takeaway pickup and doorstep delivery.</p>
+              </div>
+              <button class="btn btn-orange" onclick="openOrderModal()">
+                Order Takeaway Now
+              </button>
+            </div>
+
+            <!-- Column 3: Follow Us -->
+            <div class="cta-card">
+              <div>
+                <div class="cta-card-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                  </svg>
+                </div>
+                <h3>Follow Our Adda</h3>
+                <p>Daily cafe reels, funny memes, monsoon snacks specials, and customer stories.</p>
+              </div>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="border-color: rgba(255,255,255,0.4); color: #FFFFFF;">
+                @auracafe.bengaluru (35K+)
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 9. FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Col 1: Brand -->
+          <div class="footer-brand">
+            <div class="logo-text">
+              <span class="logo-brand">AURA CAFE & CHAI ADDA</span>
+              <span class="logo-sub" style="color: var(--accent);">Apna Neighborhood Adda</span>
+            </div>
+            <p>
+              Serving authentic South Indian degree filter kaapi, kadak kulhad chai, fresh bun maska, and hot snacks to Bengaluru with pure love since 2018.
+            </p>
+            <div class="footer-socials">
+              <a href="https://instagram.com" class="social-link" aria-label="Follow us on Instagram" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              </a>
+              <a href="https://facebook.com" class="social-link" aria-label="Follow us on Facebook" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a href="https://wa.me/919845012345" class="social-link" aria-label="Chat with us on WhatsApp" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Col 2: Quick Links -->
+          <div>
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="#menu">Signature Menu</a></li>
+              <li><a href="#about">Our Story & Heritage</a></li>
+              <li><a href="#gallery">Cafe Photo Gallery</a></li>
+              <li><a href="#testimonials">Customer Reviews</a></li>
+              <li><a href="#location">Hours & Location</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Contact Details -->
+          <div>
+            <h4 class="footer-title">Contact & Visit</h4>
+            <p style="font-size: 0.92rem; margin-bottom: 8px;">12th Main Rd, Indiranagar, Bengaluru, KA 560038</p>
+            <p style="font-size: 0.92rem; margin-bottom: 8px;"><strong>Phone:</strong> +91 80 4965 2200</p>
+            <p style="font-size: 0.92rem; margin-bottom: 8px;"><strong>WhatsApp:</strong> +91 98450 12345</p>
+            <p style="font-size: 0.92rem;"><strong>Email:</strong> namaste@auracafe.in</p>
+          </div>
+
+          <!-- Col 4: Newsletter Signup -->
+          <div>
+            <h4 class="footer-title">Chai & Snacks Offers</h4>
+            <p style="font-size: 0.88rem; color: #9E9184; margin-bottom: 14px;">
+              Get weekend snack discounts, festive combos, and student offer alerts directly to your inbox.
+            </p>
+            <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+              <input 
+                type="email" 
+                id="newsletter-email" 
+                class="newsletter-input" 
+                placeholder="Enter your email" 
+                required 
+                aria-label="Email address for newsletter"
+              />
+              <button type="submit" class="btn btn-primary" style="padding: 10px 18px;">
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 Aura Cafe & Chai Adda. All rights reserved. Crafted with care in Bengaluru, India.</p>
+          <p>FSSAI Lic. No: 11221334000451 • Pure Ingredients & Clean Kitchen</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- RESERVATION MODAL -->
+    <div id="reservation-modal" class="modal-backdrop" onclick="handleBackdropClick(event, 'reservation-modal')">
+      <div class="modal-dialog">
+        <button class="modal-close-btn" onclick="closeReservationModal()" aria-label="Close modal">×</button>
+        <div style="margin-bottom: 20px;">
+          <span class="section-badge">Instant Confirmation</span>
+          <h3 style="font-size: 1.6rem; margin-top: 4px;">Reserve Your Table</h3>
+          <p style="font-size: 0.9rem; margin-bottom: 0;">Book a table for your friends, family, or work session without any waiting.</p>
+        </div>
+
+        <form id="reservation-form" onsubmit="handleReservationSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="res-date">Date</label>
+              <input type="date" id="res-date" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="res-time">Time</label>
+              <select id="res-time" class="form-control" required>
+                <option value="08:00">8:00 AM (Morning Filter Kaapi)</option>
+                <option value="09:30">9:30 AM (Breakfast & Bun Maska)</option>
+                <option value="11:30">11:30 AM (Brunch & Work)</option>
+                <option value="13:30">1:30 PM (Lunch Sandwich)</option>
+                <option value="16:30">4:30 PM (Evening Chai & Samosa)</option>
+                <option value="18:30" selected>6:30 PM (Sunset Adda)</option>
+                <option value="20:30">8:30 PM (Dinner & Cold Coffee)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="res-guests">Guests</label>
+              <select id="res-guests" class="form-control" required>
+                <option value="1">1 Person (Quiet Work Spot)</option>
+                <option value="2" selected>2 Persons (Cozy Table)</option>
+                <option value="3">3 Persons</option>
+                <option value="4">4 Persons (Corner Booth)</option>
+                <option value="5-8">5 to 8 Persons (Garden Gang Table)</option>
+                <option value="8+">8+ Persons (Party / Group)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="res-seating">Area Preference</label>
+              <select id="res-seating" class="form-control">
+                <option value="Garden Courtyard">Garden Courtyard (Breezy Open Air)</option>
+                <option value="Indoor AC Lounge">Indoor AC Lounge (Quiet & Cozy)</option>
+                <option value="Live Kaapi Counter">Live Kaapi & Chai Counter</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="res-name">Full Name</label>
+            <input type="text" id="res-name" class="form-control" placeholder="e.g. Rahul Sharma" required />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="res-phone">Phone Number</label>
+              <input type="tel" id="res-phone" class="form-control" placeholder="+91 98765 43210" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="res-email">Email Address</label>
+              <input type="email" id="res-email" class="form-control" placeholder="you@example.com" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="res-notes">Special Requests (Optional)</label>
+            <input type="text" id="res-notes" class="form-control" placeholder="Birthday celebration, high-chair, quiet plug-point..." />
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">
+            Confirm Table Reservation Free
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- ORDER ONLINE MODAL -->
+    <div id="order-modal" class="modal-backdrop" onclick="handleBackdropClick(event, 'order-modal')">
+      <div class="modal-dialog">
+        <button class="modal-close-btn" onclick="closeOrderModal()" aria-label="Close modal">×</button>
+        <div style="margin-bottom: 18px;">
+          <span class="section-badge" style="background: rgba(204,85,0,0.12); color: var(--burnt-orange);">Takeaway & Delivery</span>
+          <h3 style="font-size: 1.6rem; margin-top: 4px;">Order from Aura Cafe</h3>
+          <p style="font-size: 0.9rem; margin-bottom: 0;">Order your favorite chai, filter coffee & fresh snacks directly.</p>
+        </div>
+
+        <div style="background: #FAF7F2; border: 1px solid var(--border-color); border-radius: 8px; padding: 16px; margin-bottom: 20px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+            <strong>Degree Filter Kaapi / Kadak Chai</strong>
+            <span style="font-weight: 700; color: var(--primary);">₹60</span>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+            <strong>Fresh Irani Bun Maska & Jam</strong>
+            <span style="font-weight: 700; color: var(--primary);">₹70</span>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+            <strong>Bombay Grilled Paneer Sandwich</strong>
+            <span style="font-weight: 700; color: var(--primary);">₹180</span>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <strong>Desi Cold Coffee with Chocolate Drizzle</strong>
+            <span style="font-weight: 700; color: var(--primary);">₹90</span>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <a href="https://wa.me/919845012345?text=Namaste%20Aura%20Cafe!%20I%20would%20like%20to%20order%20takeaway." target="_blank" rel="noopener" class="btn btn-orange" style="width: 100%;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            Order Instantly on WhatsApp (+91 98450 12345)
+          </a>
+          <button class="btn btn-secondary" onclick="showToast('Connecting directly to cafe counter... Call +91 80 4965 2200'); closeOrderModal();">
+            Call Cafe Counter (+91 80 4965 2200)
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox-modal" class="lightbox-modal" onclick="closeLightbox()">
+      <img id="lightbox-image" class="lightbox-img" src="" alt="Ambiance Gallery Preview" />
+    </div>
+
+    <!-- FLOATING BACK-TO-TOP BUTTON -->
+    <button id="back-to-top" class="back-to-top" onclick="scrollToTop()" aria-label="Back to top">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m18 15-6-6-6 6"/>
+      </svg>
+    </button>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast" class="toast">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+      <span id="toast-message">Action successful!</span>
+    </div>
+
+    <!-- VANILLA JAVASCRIPT -->
+    <script>
+      // Initialize default reservation date to today
+      document.addEventListener('DOMContentLoaded', function() {
+        const dateInput = document.getElementById('res-date');
+        if (dateInput) {
+          const today = new Date().toISOString().split('T')[0];
+          dateInput.value = today;
+          dateInput.min = today;
+        }
+      });
+
+      // Sticky Header Scroll Effect & Back-to-Top Toggle
+      window.addEventListener('scroll', function() {
+        const header = document.getElementById('site-header');
+        const backToTop = document.getElementById('back-to-top');
+        
+        if (window.scrollY > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+
+        if (window.scrollY > 400) {
+          backToTop.classList.add('visible');
+        } else {
+          backToTop.classList.remove('visible');
+        }
+      });
+
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }
+
+      // Mobile Hamburger Navigation
+      function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('active');
+      }
+
+      function closeMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.remove('active');
+      }
+
+      // Reservation Modal Handlers
+      function openReservationModal() {
+        document.getElementById('reservation-modal').classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeReservationModal() {
+        document.getElementById('reservation-modal').classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      // Order Modal Handlers
+      function openOrderModal() {
+        document.getElementById('order-modal').classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeOrderModal() {
+        document.getElementById('order-modal').classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      function handleBackdropClick(e, modalId) {
+        if (e.target.id === modalId) {
+          if (modalId === 'reservation-modal') closeReservationModal();
+          if (modalId === 'order-modal') closeOrderModal();
+        }
+      }
+
+      // Lightbox Handlers
+      function openLightbox(src, title) {
+        const modal = document.getElementById('lightbox-modal');
+        const img = document.getElementById('lightbox-image');
+        img.src = src;
+        img.alt = title;
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        const modal = document.getElementById('lightbox-modal');
+        modal.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      // Reservation Form Submit Handler
+      function handleReservationSubmit(e) {
+        e.preventDefault();
+        const name = document.getElementById('res-name').value;
+        const date = document.getElementById('res-date').value;
+        const time = document.getElementById('res-time').value;
+        const guests = document.getElementById('res-guests').value;
+        const seating = document.getElementById('res-seating').value;
+
+        closeReservationModal();
+        e.target.reset();
+
+        showToast(`Table reserved for ${name} (${guests} guest${guests === '1' ? '' : 's'}) on ${date} at ${time} in ${seating}! An SMS confirmation has been sent.`);
+      }
+
+      // Newsletter Form Submit Handler
+      function handleNewsletterSubmit(e) {
+        e.preventDefault();
+        const input = document.getElementById('newsletter-email');
+        showToast('Dhanyawaad! You have been added to our Chai & Snacks weekly offers list.');
+        input.value = '';
+      }
+
+      // Toast Notification System
+      let toastTimeout;
+      function showToast(message) {
+        const toast = document.getElementById('toast');
+        const toastMsg = document.getElementById('toast-message');
+        toastMsg.textContent = message;
+        toast.classList.add('show');
+
+        clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(function() {
+          toast.classList.remove('show');
+        }, 4500);
+      }
+    </script>
+  </body>
+</html>
+
